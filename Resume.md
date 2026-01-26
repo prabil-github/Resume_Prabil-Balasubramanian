@@ -8,7 +8,7 @@ Dallas, Texas | https://www.linkedin.com/in/prabil-balasubramanian | prabil@gmai
 
 ## EXECUTIVE PROFILE
 
-Distinguished technology leader with 15+ years of progressive experience architecting and delivering transformative data engineering solutions across healthcare, retail, and enterprise sectors. Proven track record of driving multi-million dollar initiatives leveraging cloud platforms (GCP, Azure, AWS), big data technologies, and AI/ML to solve complex business challenges. Recognized for building scalable data architectures, mentoring technical talent, and partnering cross-functionally to deliver measurable business outcomes through automation, predictive analytics, and data-driven insights.
+Distinguished technology leader with with over two decades of progressive experience architecting and delivering transformative data engineering solutions across healthcare, retail, and enterprise sectors. Proven track record of driving multi-million dollar initiatives leveraging cloud platforms (GCP, Azure, AWS), big data technologies, and AI/ML to solve complex business challenges. Recognized for building scalable data architectures, mentoring technical talent, and partnering cross-functionally to deliver measurable business outcomes through automation, predictive analytics, and data-driven insights.
 
 **Core Competencies:**
 - Data Engineering & Architecture • Cloud Platforms (GCP, Azure, AWS) • Big Data & Streaming Technologies
@@ -27,7 +27,7 @@ Distinguished technology leader with 15+ years of progressive experience archite
 Lead strategic data engineering and AI initiatives across multi-cloud platforms, driving innovation in healthcare data solutions and delivering significant cost optimization through automation and intelligent data processing.
 
 **Strategic Leadership & Innovation:**
-- Spearhead multi-million dollar strategic partnership with Google, architecting AI-driven solution to reduce healthcare claims overpayments by analyzing complex structured/unstructured data including benefits, policies, and payer-provider contracts—identifying potential savings in excess of $50M annually
+- Spearhead multi-million dollar strategic partnership with Google, architecting AI-driven solution to reduce healthcare claims overpayments by analyzing complex structured/unstructured data including benefits, policies, and payer-provider contracts—identifying potential savings in excess of Multi-Million Dollors annually
 - Drive modernization of enterprise data architecture across GCP and Azure platforms, establishing scalable cloud-native solutions that support hybrid and multi-cloud strategies
 - Provide technical mentorship to 15+ engineers and data scientists, fostering architectural excellence and professional development through Optum Tech University instruction
 
