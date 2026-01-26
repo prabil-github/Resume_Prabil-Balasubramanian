@@ -2,7 +2,7 @@
 
 **Senior Technology Leader | Data Engineering & Cloud Architecture | AI/ML Innovation**
 
-Dallas, Texas | (https://www.linkedin.com/in/prabil-balasubramanian/) | [prabil@gmail.com] | [612-644-5456]
+Dallas, Texas | https://www.linkedin.com/in/prabil-balasubramanian | prabil@gmail.com | 612-644-5456
 
 ---
 
