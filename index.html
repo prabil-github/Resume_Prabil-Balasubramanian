@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prabil Balasubramanian | Senior Technology Leader - Data Engineering & AI/ML</title>
+    <meta name="description" content="Senior Technology Leader with 20+ years in Data Engineering, Cloud Architecture, and AI/ML Innovation">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=IBM+Plex+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-dark: #0a1628;
+            --primary-blue: #1e3a5f;
+            --accent-gold: #d4af37;
+            --accent-teal: #2dd4bf;
+            --text-primary: #e8edf4;
+            --text-secondary: #9ca9bc;
+            --text-muted: #6b7a91;
+            --surface: #0f1d32;
+            --surface-elevated: #1a2942;
+            --border: rgba(212, 175, 55, 0.15);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--primary-dark);
+            color: var(--text-primary);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        
+        /* Animated background gradient */
+        body::before {
+            content: '';
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(30, 58, 95, 0.4) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(45, 212, 191, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.08) 0%, transparent 50%);
+            animation: backgroundShift 20s ease infinite;
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        @keyframes backgroundShift {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(-5%, -5%) rotate(5deg); }
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Header */
+        header {
+            padding: 6rem 0 4rem;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+            animation: fadeInDown 1s ease;
+        }
+        
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .name {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-teal) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+        
+        .title {
+            font-size: clamp(1rem, 2.5vw, 1.4rem);
+            color: var(--accent-gold);
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+        }
+        
+        .contact {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        .contact a {
+            color: var(--accent-teal);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+        
+        .contact a:hover {
+            color: var(--text-primary);
+            border-bottom-color: var(--accent-teal);
+        }
+        
+        /* Main Content */
+        main {
+            padding: 4rem 0;
+        }
+        
+        section {
+            margin-bottom: 5rem;
+            animation: fadeInUp 0.8s ease;
+            animation-fill-mode: both;
+        }
+        
+        section:nth-child(1) { animation-delay: 0.1s; }
+        section:nth-child(2) { animation-delay: 0.2s; }
+        section:nth-child(3) { animation-delay: 0.3s; }
+        section:nth-child(4) { animation-delay: 0.4s; }
+        section:nth-child(5) { animation-delay: 0.5s; }
+        section:nth-child(6) { animation-delay: 0.6s; }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 700;
+            margin-bottom: 2rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-gold), var(--accent-teal));
+        }
+        
+        .profile-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            max-width: 900px;
+            text-align: justify;
+        }
+        
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .skill-item {
+            background: var(--surface-elevated);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .skill-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(45, 212, 191, 0.1), rgba(212, 175, 55, 0.1));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        
+        .skill-item:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent-teal);
+            box-shadow: 0 8px 24px rgba(45, 212, 191, 0.15);
+        }
+        
+        .skill-item:hover::before {
+            opacity: 1;
+        }
+        
+        .skill-title {
+            font-weight: 600;
+            color: var(--accent-gold);
+            margin-bottom: 0.5rem;
+            font-size: 1.05rem;
+            position: relative;
+        }
+        
+        .skill-description {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            position: relative;
+        }
+        
+        /* Education & Certifications */
+        .education-item, .cert-item {
+            background: var(--surface-elevated);
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-left: 3px solid var(--accent-gold);
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        .education-item:hover, .cert-item:hover {
+            transform: translateX(8px);
+            border-left-color: var(--accent-teal);
+        }
+        
+        .education-degree {
+            font-weight: 600;
+            color: var(--text-primary);
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+        
+        .education-school {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+        
+        .cert-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        
+        /* Experience */
+        .experience-item {
+            margin-bottom: 3rem;
+            position: relative;
+            padding-left: 2rem;
+            border-left: 2px solid var(--border);
+        }
+        
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 0;
+            width: 10px;
+            height: 10px;
+            background: var(--accent-gold);
+            border-radius: 50%;
+            box-shadow: 0 0 0 4px var(--primary-dark), 0 0 12px var(--accent-gold);
+        }
+        
+        .company-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 0.5rem;
+        }
+        
+        .company-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+        
+        .job-title {
+            font-weight: 600;
+            color: var(--accent-teal);
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+        
+        .job-period {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-family: 'JetBrains Mono', monospace;
+            margin-bottom: 1rem;
+        }
+        
+        .job-description {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+        
+        .responsibility-category {
+            font-weight: 600;
+            color: var(--accent-gold);
+            margin-top: 1.5rem;
+            margin-bottom: 0.8rem;
+        }
+        
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        
+        li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--accent-teal);
+            font-weight: bold;
+        }
+        
+        /* Technical Expertise */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.2rem;
+        }
+        
+        .tech-category {
+            background: var(--surface);
+            padding: 1.2rem;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+        }
+        
+        .tech-category-title {
+            font-weight: 600;
+            color: var(--accent-gold);
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        
+        .tech-category-content {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        /* Achievements */
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .achievement-card {
+            background: linear-gradient(135deg, var(--surface-elevated), var(--surface));
+            padding: 1.8rem;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+        
+        .achievement-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--accent-gold), var(--accent-teal));
+        }
+        
+        .achievement-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(45, 212, 191, 0.2);
+        }
+        
+        .achievement-text {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            padding-left: 1rem;
+        }
+        
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 3rem 0;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: linear-gradient(135deg, var(--accent-gold), var(--accent-teal));
+            color: var(--primary-dark);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(45, 212, 191, 0.3);
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 8px 24px rgba(45, 212, 191, 0.5);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+            
+            header {
+                padding: 4rem 0 2rem;
+            }
+            
+            .contact {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+            
+            .skills-grid,
+            .tech-grid,
+            .achievements-grid,
+            .cert-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .experience-item {
+                padding-left: 1.5rem;
+            }
+        }
+        
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+            
+            .download-btn {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="name">Prabil Balasubramanian</h1>
+            <p class="title">Senior Technology Leader | Data Engineering & AI Strategy | Cloud Architecture & AI/ML Innovation</p>
+            <div class="contact">
+                <span>📍 Dallas, Texas</span>
+                <a href="https://www.linkedin.com/in/prabil-balasubramanian" target="_blank">🔗 LinkedIn</a>
+                <a href="mailto:Prabil@Gmail.Com">✉️ Prabil@Gmail.Com</a>
+                <a href="tel:612-644-5456">📱 612-644-5456</a>
+            </div>
+        </header>
+
+        <main>
+            <section id="profile">
+                <h2 class="section-title">Executive Profile</h2>
+                <p class="profile-text">
+                    Distinguished senior technology leader with 20+ years of progressive experience architecting and delivering 
+                    enterprise-wide data transformation initiatives across healthcare, retail, and complex enterprise environments. 
+                    Proven track record of driving multi-million dollar AI and data strategy programs, establishing scalable 
+                    cloud-native architectures, and leading cross-functional teams to deliver measurable business outcomes. Expert 
+                    in unifying disparate data ecosystems, digitizing unstructured data, and enabling AI-driven personalization at 
+                    scale. Recognized for building high-performing teams, influencing executive leadership, and partnering across 
+                    product, technology, and compliance functions to deliver breakthrough results.
+                </p>
+            </section>
+
+            <section id="skills">
+                <h2 class="section-title">Key Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-title">Enterprise Data Strategy & Architecture</div>
+                        <div class="skill-description">Unified data ecosystems, semantic modeling, data coordination frameworks, ground truth data management, API-driven architectures</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-title">AI/ML & GenAI Solutions</div>
+                        <div class="skill-description">LLMs, RAG architecture, Agentic AI, NLP, model evaluation, fine-tuning, AI governance, responsible AI frameworks</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-title">Data Transformation & Digitization</div>
+                        <div class="skill-description">Unstructured data processing, data extraction/transformation/loading (ETL), metadata management, data standardization</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-title">Cloud Platforms & Big Data</div>
+                        <div class="skill-description">Multi-cloud expertise (GCP, Azure), Apache Spark, Kafka, Hadoop ecosystem, distributed processing, data lake/warehouse architecture</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-title">Data Governance & Compliance</div>
+                        <div class="skill-description">Data quality frameworks, master data management, HIPAA/SOC2 compliance, risk management, data integrity and security</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-title">Persona-Driven Data Strategy</div>
+                        <div class="skill-description">Dynamic content tailoring, contextualized data delivery, multi-audience data optimization</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-title">Technical Leadership & Influence</div>
+                        <div class="skill-description">Executive stakeholder management, cross-functional team leadership, change management, Agile/SAFe methodologies</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-title">Analytics & Business Intelligence</div>
+                        <div class="skill-description">Power BI, Splunk, advanced analytics, OKR definition and monitoring, KPI-driven optimization</div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="education">
+                <h2 class="section-title">Education</h2>
+                <div class="education-item">
+                    <div class="education-degree">Postgraduate Degree, Artificial Intelligence and Machine Learning: Business Applications <em>(In Progress)</em></div>
+                    <div class="education-school">The University of Texas at Austin</div>
+                </div>
+                <div class="education-item">
+                    <div class="education-degree">Master of Computer Applications</div>
+                    <div class="education-school">Bharathiar University | 2003</div>
+                </div>
+                <div class="education-item">
+                    <div class="education-degree">Bachelor's Degree, Mathematics</div>
+                    <div class="education-school">University of Calicut</div>
+                </div>
+            </section>
+
+            <section id="experience">
+                <h2 class="section-title">Professional Experience</h2>
+                
+                <div class="experience-item">
+                    <div class="company-header">
+                        <div class="company-name">OPTUM (UnitedHealthcare)</div>
+                    </div>
+                    
+                    <div class="job-title">Sr. Principal Engineer, Technology Leadership Career Path (TLCP)</div>
+                    <div class="job-period">June 2022 – Present | Minnesota, United States</div>
+                    <p class="job-description">
+                        Lead strategic data engineering and AI initiatives across multi-cloud platforms, driving enterprise-wide data 
+                        transformation and innovation in healthcare data solutions. Serve as principal advisor on data strategy, 
+                        architecture, and AI enablement while delivering significant cost optimization through automation and intelligent 
+                        data processing.
+                    </p>
+                    
+                    <div class="responsibility-category">Strategic Leadership & Data Transformation:</div>
+                    <ul>
+                        <li>Spearhead multi-million dollar strategic partnership with Google, architecting AI-driven solution analyzing complex structured/unstructured data including benefits, policies, and payer-provider contracts—identifying potential savings exceeding $50M annually by reducing healthcare claims overpayments</li>
+                        <li>Drive enterprise-wide modernization of data architecture across GCP and Azure platforms, establishing unified, scalable cloud-native solutions supporting hybrid and multi-cloud strategies for data coordination and interoperability</li>
+                        <li>Architect end-to-end data ingestion, processing, and analytics pipelines leveraging GCP services (Cloud Run, BigQuery, Bigtable, Firestore, Pub/Sub) and cloud-native data appliances, enabling seamless AI experiences across platforms</li>
+                        <li>Provide technical mentorship to 15+ engineers and data scientists through Optum Tech University, fostering architectural excellence, innovation culture, and professional development</li>
+                    </ul>
+                    
+                    <div class="responsibility-category">AI/ML Innovation & Data Enablement:</div>
+                    <ul>
+                        <li>Developed enterprise RAG (Retrieval-Augmented Generation) chatbot using LLMs and Streamlit, enabling intelligent, contextualized data access across distributed systems and improving user engagement by 40%</li>
+                        <li>Design and implement machine learning pipelines and predictive analytics models automating data quality validation, governance workflows, and operational processes across the data ecosystem</li>
+                        <li>Created custom Power BI dashboards providing real-time visibility into operational metrics, data pipeline health, and process performance for internal stakeholders and client organizations</li>
+                        <li>Design large-scale Big Data solutions using Apache Spark (batch and streaming), distributed processing frameworks, and data lake architectures supporting petabyte-scale analytics</li>
+                    </ul>
+                    
+                    <div class="responsibility-category">Cross-Functional Leadership & Business Impact:</div>
+                    <ul>
+                        <li>Partner with product, business, UI, and platform teams ensuring solutions meet security, compliance (HIPAA, SOC2), scalability, and performance standards while aligning with enterprise priorities</li>
+                        <li>Drive continuous improvement initiatives reducing cloud infrastructure costs by 25% through optimization, intelligent archival strategies, and automation of resource management</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">Principal Engineer, Technology Leadership Career Path (TLCP)</div>
+                    <div class="job-period">June 2017 – June 2022</div>
+                    <p class="job-description">
+                        Delivered technical solutions for enterprise Big Data platform development and implementation within Agile frameworks, 
+                        establishing best practices for data ingestion, quality, governance, and digital transformation.
+                    </p>
+                    
+                    <div class="responsibility-category">Platform Development & Data Architecture:</div>
+                    <ul>
+                        <li>Architected Big Data solutions addressing application performance and quality constraints, providing technical leadership for new tenant/client acquisition initiatives and data ecosystem expansion</li>
+                        <li>Designed and implemented data ingestion and snapshot processes within HDFS-based Big Data architecture supporting 2+ petabyte data lake operations with structured and unstructured data sources</li>
+                        <li>Created critical Airflow workflow ingesting and transforming COVID-19 data for California Department of Public Health—securing multi-million dollar contract and enabling real-time public health response during pandemic</li>
+                        <li>Developed Splunk dashboards meeting enterprise reporting requirements, providing operational insights and enabling data-driven decision making across business units</li>
+                    </ul>
+                    
+                    <div class="responsibility-category">Data Governance, Quality & Digitization:</div>
+                    <ul>
+                        <li>Integrated master data management capabilities for data enrichment and address standardization, improving data quality by 35% and enabling trusted data sources for analytics and AI</li>
+                        <li>Implemented comprehensive data quality and cleansing frameworks using custom components built with Kafka, Pig, Spark/Scala, Unix, and Talend, establishing ground truth data management practices</li>
+                        <li>Established automated validation processes for HBASE and HIVE, reducing manual data validation efforts by 60% and ensuring data integrity across distributed systems</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">Big Data Engineer (Celmac Technology Consultant)</div>
+                    <div class="job-period">April 2015 – June 2017</div>
+                    <p class="job-description">
+                        Architected and enhanced Data-Fabric framework for enterprise data lake ingestion, managing 70+ data sources totaling 
+                        2 petabytes with focus on automation, cost optimization, and digital data transformation.
+                    </p>
+                    <ul>
+                        <li>Developed reusable microservices for pre-ingestion processing, automating deployment via CI/CD pipelines using GitHub, Jenkins, Docker, and OpenShift, reducing deployment time by 70%</li>
+                        <li>Built Oozie workflow ingesting 40TB OmniChannel logs to BigData, enabling log retention, analytics, and AI/ML opportunities while reducing storage costs by 30% through intelligent data organization</li>
+                        <li>Optimized data lake query efficiency by 50% through strategic parquet file partitioning and data organization strategies, improving interoperability and analytical performance</li>
+                        <li>Engineered custom Kafka consumer program supporting previously unsupported data formats, expanding platform capabilities for diverse data source integration</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="company-header">
+                        <div class="company-name">TARGET</div>
+                    </div>
+                    
+                    <div class="job-title">Technical Program Lead (Celmac Technology Consultant)</div>
+                    <div class="job-period">September 2012 – March 2015 | Minneapolis, Minnesota</div>
+                    <p class="job-description">
+                        Led cross-functional teams in designing and implementing quality assurance strategies for Point of Sale systems, 
+                        ensuring timely delivery, compliance with quality standards, and successful program execution.
+                    </p>
+                    <ul>
+                        <li>Guided multiple departments in developing QA strategies from design through production, collaborating with management to establish quality processes and governance frameworks</li>
+                        <li>Managed teams across different programs, resolving conflicts and ensuring milestone execution within established timeframes through effective stakeholder management</li>
+                        <li>Developed group and individual timelines, identified potential bottlenecks, and implemented process improvements reducing delivery time by 20%</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="company-name">Earlier Career Progression</div>
+                    <p class="job-description" style="margin-top: 1rem;">
+                        Early career roles establishing foundation in software development, quality assurance, technical leadership, and 
+                        data processing across retail and telecom domains.
+                    </p>
+                    <ul>
+                        <li><strong>Sr. Software Engineer</strong> | Celmac Technology Services (2010 – 2017)</li>
+                        <li><strong>Point Of Sale Lead Engineer</strong> | Target (Wipro Consultant, 2007 – 2010)</li>
+                        <li><strong>Sr. Software Engineer</strong> | Wipro Technologies (2004 – 2007)</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="certifications">
+                <h2 class="section-title">Certifications & Professional Development</h2>
+                <div class="cert-list">
+                    <div class="cert-item">AI Dojo Certification – Optum Tech University</div>
+                    <div class="cert-item">IBM AI/ML Professional Certification</div>
+                    <div class="cert-item">IBM Python for Data Science Certification</div>
+                    <div class="cert-item">Scrum Alliance Certified Scrum Master (CSM)</div>
+                    <div class="cert-item">CoreStrength Leadership Certification</div>
+                </div>
+            </section>
+
+            <section id="technical">
+                <h2 class="section-title">Technical Expertise</h2>
+                <div class="tech-grid">
+                    <div class="tech-category">
+                        <div class="tech-category-title">Cloud Platforms</div>
+                        <div class="tech-category-content">Google Cloud Platform (GCP), Microsoft Azure</div>
+                    </div>
+                    <div class="tech-category">
+                        <div class="tech-category-title">Big Data & Streaming</div>
+                        <div class="tech-category-content">Apache Spark, Kafka, Hadoop (HDFS, Hive, HBase), MapReduce, Databricks</div>
+                    </div>
+                    <div class="tech-category">
+                        <div class="tech-category-title">Data Platforms</div>
+                        <div class="tech-category-content">Snowflake, BigQuery, Azure Synapse, Data Factory, Bigtable, Firestore</div>
+                    </div>
+                    <div class="tech-category">
+                        <div class="tech-category-title">AI/ML & GenAI</div>
+                        <div class="tech-category-content">LLMs, RAG Architecture, Agentic AI, Machine Learning Pipelines, NLP, TensorFlow, PyTorch</div>
+                    </div>
+                    <div class="tech-category">
+                        <div class="tech-category-title">Programming</div>
+                        <div class="tech-category-content">Python, Scala, SQL, Shell Scripting</div>
+                    </div>
+                    <div class="tech-category">
+                        <div class="tech-category-title">DevOps & Orchestration</div>
+                        <div class="tech-category-content">Jenkins, Docker, Kubernetes, OpenShift, Airflow, Oozie, CI/CD Pipelines</div>
+                    </div>
+                    <div class="tech-category">
+                        <div class="tech-category-title">Data Governance</div>
+                        <div class="tech-category-content">Master Data Management, Data Quality Frameworks, Data Modeling, Metadata Management</div>
+                    </div>
+                    <div class="tech-category">
+                        <div class="tech-category-title">Analytics & BI</div>
+                        <div class="tech-category-content">Power BI, Splunk, Tableau, Streamlit</div>
+                    </div>
+                    <div class="tech-category">
+                        <div class="tech-category-title">Agile & Collaboration</div>
+                        <div class="tech-category-content">Jira, Confluence, Agile/Scrum Methodologies, SAFe</div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="achievements">
+                <h2 class="section-title">Key Achievements</h2>
+                <div class="achievements-grid">
+                    <div class="achievement-card">
+                        <div class="achievement-text">Led strategic Google partnership initiative identifying $50M+ annual savings through AI-driven healthcare claims optimization</div>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-text">Architected Bigdata platforms for ingesting 40TB logs to Datalake in Hadoop eco system</div>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-text">Reduced cloud infrastructure costs by 25% through optimization and intelligent archival strategies</div>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-text">Secured multi-million dollar California Department of Public Health contract through COVID data solution</div>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-text">Mentored 15+ engineers through Optum Tech University, driving technical excellence and career development</div>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-text">Improved data lake query performance by 50% through strategic optimization initiatives</div>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-text">Built enterprise RAG chatbot increasing user engagement by 40% through intelligent data access</div>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-text">Led successful PCI Compliance implementation and Centralized Encryption Data Store development at Target</div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <a href="Executive-Resume-Prabil_Balasubramanian.pdf" class="download-btn" download>Download PDF Resume</a>
+            <p>&copy; 2026 Prabil Balasubramanian. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
